@@ -50,22 +50,22 @@ app.set('views', path.join(__dirname, 'views')) // Set the views directory
 
 // ENDPOINTS
 app.get('/', (req, res)=>{ 
-    const params = { }
+    const params = {}
     res.status(200).render('home.pug', params);
 })
 
 app.get('/contact', (req, res)=>{ 
-    const params = { }
+    const params = {}
     res.status(200).render('contact.pug', params);
 })
 //addd
 app.get('/library_info', (req, res)=>{ 
-    const params = { }
+    const params = {}
     res.status(200).render('library_info.pug', params);
 })
 //addd
 app.get('/about', (req, res)=>{ 
-    const params = { }
+    const params = {}
     res.status(200).render('about.pug', params);
 })
 
