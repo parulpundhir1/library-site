@@ -24,19 +24,16 @@ var Contact = mongoose.model('Contact', contactSchema);
 
 // Define mongoose schema addd
 var library_infoSchema = new mongoose.Schema({
-    name: String,
-    Rolenumber: String,
-    EmailId: String,
-    DateOfBirth: String,
-    MARKSinintermediate: String,
-    AREYOUELIGIBLE: String,
-    Gender: Boolean,
+    myname: String,
+    myrollnumber: String,
+    myemail: String,
+    mydate: String,
+    mynumber: String,
+    myeligibility: String,
+    mygender: Boolean,
     writeaboutyouself: String,
-    stateresiding: String
+    mystateresiding: String
     // Submithere: string
-
-
-
   });
 
 var library_info = mongoose.model('library_info', library_infoSchema);
@@ -94,9 +91,6 @@ app.post('/library_info', (req, res)=>{
 
     // res.status(200).render('library_info.pug');
 })
-
-
-
 
 
 // START THE SERVER
