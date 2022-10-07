@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const mongoose = require('mongoose');
 const bodyparser = require("body-parser");
+const { stringify } = require("querystring");
 
 
 mongoose.connect('mongodb://localhost/library', {useNewUrlParser: true});
@@ -24,10 +25,18 @@ var Contact = mongoose.model('Contact', contactSchema);
 // Define mongoose schema addd
 var library_infoSchema = new mongoose.Schema({
     name: String,
-    phone: String,
-    email: String,
-    address: String,
-    desc: String
+    Rolenumber: String,
+    EmailId: String,
+    DateOfBirth: String,
+    MARKSinintermediate: String,
+    AREYOUELIGIBLE: String,
+    Gender: Boolean,
+    writeaboutyouself: String,
+    stateresiding: String
+    // Submithere: string
+
+
+
   });
 
 var library_info = mongoose.model('library_info', library_infoSchema);
