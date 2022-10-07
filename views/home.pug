@@ -1,0 +1,47 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+    style
+      include ../static/style.css
+
+block content 
+    section#introSection
+        div Welcome to Old books library
+        div.small Eat Sleep Read Repeat
+        div.big you will really enjoy being here. I hope that we lived upto your expectation
+
+    section#missionSection
+        h2 Our Mission
+        div.card
+            h3 best enviroment for study
+            div.card-box
+                div.card-img
+                    img(src="/static/img/1.png")
+                div.card-content
+                    p This is the best book site of the universe The first step to creating your study space is to choose a comfortable location. 
+        div.card
+            h3 Read the books you love
+            div.card-box
+                div.card-img
+                    img(src="/static/img/2.png")
+                div.card-content
+                    p This is the best book site of the universe The first step to creating your study space is to choose a comfortable location. 
+        div.card
+            h3  Expert advice
+            div.card-box
+                div.card-img
+                    img(src="/static/img/3.png")
+                div.card-content
+                    p This is the best book site of the universe The first step to creating your study space is to choose a comfortable location. 
+                
+
+    section#sponsorsSection
+        h2 Our Sponsors
+        div#sponsors 
+            img(src="/static/img/logo1.png", alt="Sponsor Image", class="spImage")
+            img(src="/static/img/logo2.png", alt="Sponsor Image", class="spImage")
+            img(src="/static/img/logo3.png", alt="Sponsor Image", class="spImage")
+            img(src="/static/img/logo4.png", alt="Sponsor Image", class="spImage")

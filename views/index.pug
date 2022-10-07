@@ -1,0 +1,61 @@
+
+doctype html
+html
+  head
+    title Library
+    style
+      include ../static/style.css
+  body
+    nav#navbar
+        ul
+            div#logo
+                //- img(src="/static/img/logo.png")
+                | OBL
+            li #[a(href="/") Home]
+            li #[a(href="/") About]
+            //- li #[a(href="/") Services]
+            li #[a(href="/") Library  Info]
+            li #[a(href="/") Contact Us]
+
+    section#introSection
+        div Welcome to Old books Library
+        div.small Eat Sleep Read Repeat
+        div.big you will really enjoy being here. i hope that we will work upon your expectation 
+
+    section#missionSection
+        h2 Our Mission
+        div.card
+            h3 best enviroment for study
+            div.card-box
+                div.card-img
+                    img(src="/static/img/1.png")
+                div.card-content
+                    p This is the best book site of the universe The first step to creating your study space is to choose a comfortable location. 
+
+        div.card
+            h3 Read the books you love
+            div.card-box
+                div.card-img
+                    img(src="/static/img/2.png")
+                div.card-content
+                    p This is the best book of the universe The first step to creating your study space is to choose a comfortable location. 
+        div.card
+            h3 Expert advice 
+            div.card-box
+                div.card-img
+                    img(src="/static/img/3.png")
+                div.card-content
+                    p This is the best book site of the universe. The first step to creating your study space is to choose a comfortable location. 
+                           
+    section#sponsorsSection
+        h2 Our Sponsors
+        div#sponsors 
+            img(src="/static/img/logo1.png", alt="Sponsor Image", class="spImage")
+            img(src="/static/img/logo2.png", alt="Sponsor Image", class="spImage")
+            img(src="/static/img/logo3.png", alt="Sponsor Image", class="spImage")
+            img(src="/static/img/logo4.png", alt="Sponsor Image", class="spImage")
+
+    footer#footer
+        | Copyright © 2022 Oldbooks.com | All rights reserved
+    script
+      include ../static/index.js

@@ -1,0 +1,72 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+    style
+      include ../static/style.css
+      include ../static/stylelb.css
+
+block content
+    div.container
+        h1 Register Yourself for library 
+        
+         form(action="/library_info", method="post")
+                label(for='Name:')  Name
+                div 
+                    input(type='text' name='my name' id='Name')
+                br
+                label(for='Role number:')  Role number
+                div
+                    input(type='text' name='my roll number' id='Rolenumber')
+                br
+                label(for='Email:')  Email Id
+                div
+                    input(type='email' name='myemail ' id='Email')
+                br
+                label(for='Date Of Birth:')  Date Of Birth
+                div
+                    input(type='date' name='my date' id='DateOfBirth')
+                br
+                label(for='MARKS in intermediate:')  MARKS in intermediate
+                div
+                input(type='number' name='my number' id='MARKSinintermediate')
+                br
+                br
+                label(for='ARE YOU ELIGIBLE:')  ARE YOU ELIGIBLE
+                div
+                    input(type='checkbox' name='my eligibility' id='AREYOUELIGIBLE' checked='')
+                br
+                // you select only one
+                div
+                    | Gender  male
+                                
+                    input(type='radio' name='mygender')
+                    |             female
+                    input(type='radio' name='mygender')
+                    |             other
+                    input(type='radio' name='mygender')
+                br
+                label(for='  write about youself: ')    write about youself
+                div
+                    br
+                    textarea(name='mytext' id= 'writeaboutyouself' cols='200' rows='10')
+                br
+                label(for='state residing')  state residing
+                div 
+                br
+                select(name=' my state residing' id='stateresiding')
+                    option(value='up') uttar pradesh
+                    option(value='mp') madya pradesh
+                    option(value='delhi') delhi
+                    option(value='other') other
+                br
+                br
+                div
+                    | Submit here 
+                    button(class="btn")
+                        | Submit
+                    //- input(type='submit' name='submit now')
+                    //- br
+        
