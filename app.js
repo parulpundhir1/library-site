@@ -25,7 +25,7 @@ var contactSchema = new mongoose.Schema({
 var Contact = mongoose.model('Contact', contactSchema);
 
 // Define mongoose schema addd
-var library_infoSchema = new mongoose.Schema({
+var libraryinfoSchema = new mongoose.Schema({
     myname: String,
     myrollnumber: String,
     myemail: String,
@@ -38,7 +38,7 @@ var library_infoSchema = new mongoose.Schema({
     // Submithere: string
   });
 
-var library_info = mongoose.model('library_info', library_infoSchema);
+var Libraryinfo = mongoose.model('Libraryinfo', libraryinfoSchema);
 
 
 
@@ -61,9 +61,9 @@ app.get('/contact', (req, res)=>{
     res.status(200).render('contact.pug', params);
 })
 //addd
-app.get('/library_info', (req, res)=>{ 
+app.get('/libraryinfo', (req, res)=>{ 
     const params = {}
-    res.status(200).render('library_info.pug', params);
+    res.status(200).render('libraryinfo.pug', params);
 })
 //addd
 app.get('/about', (req, res)=>{ 
@@ -83,8 +83,8 @@ app.post('/contact', (req, res)=>{
 })
 
 //addd
-app.post('/library_info', (req, res)=>{ 
-    var myData = new library_info(req.body);
+app.post('/libraryinfo', (req, res)=>{ 
+    var myData = new Libraryinfo(req.body);
     myData.save().then(()=>{
         res.send("This item has been saved to the database")
     }).catch(()=>{
